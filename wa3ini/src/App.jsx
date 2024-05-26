@@ -1,12 +1,6 @@
+import Sidebar from "./components/SideBar.jsx";
 
-function App() {
-
-
-  return (
-    <>
-      hello world
-    </>
-  )
+ function App(){
+  return <Sidebar />
 }
-
-export default App
+export default App;
