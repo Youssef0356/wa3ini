@@ -8,7 +8,7 @@ function Header() {
           src={wa3inipicture}
           alt="image description"
         />
-        <div class="absolute px-4 text-center text-lg text-white ">
+        <div className="absolute px-4 text-center text-lg text-white ">
           <h1 className="text-8xl p-5">
             وعيني
           </h1>
