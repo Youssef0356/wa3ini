@@ -1,139 +1,143 @@
 import autism from "../assets/autism.jpg";
+import deaf from "../assets/deaf.jpg";
+import blind from "../assets/blind.jpg";
+import mind from "../assets/mind.jpg";
+import chronic from "../assets/chronic.jpg";
+import family from "../assets/family.png";
 export default function CardView() {
   return (
     <>
-      <section class="h-screen w-full bg-gradient-to-br from-pink-50 to-indigo-100 p-8">
-        <div class="text-center font-bold  text-gray-700 ">
+      <section className="min-h-screen w-full bg-gradient-to-br from-pink-50 to-indigo-100 p-8">
+        <div className="text-center font-bold  text-gray-700 ">
           <div className="flex items-center justify-center">
             <h1 className="p-2 text-1xl sm:text-2xl">👋"وعيني"</h1>
             <h1 className="p-2 text-1xl sm:text-2xl">مرحبا بيك في</h1>
           </div>
           <hr />
-       
         </div>
 
-        <div class="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 my-10">
-          <div class="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
+        <div className="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 my-10">
+          <div className="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
             <img
-              class="h-56 lg:h-60 w-full object-cover"
+              className="h-56 lg:h-60 w-full object-cover"
               src={autism}
               alt=""
             />
-            <div class="p-3">
-              <h3 class="font-semibold text-xl leading-6 text-gray-700 my-2">
-                International Women's Day 2022: Date, history, significance,
-                theme this year
+            <div className="p-3">
+              <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2 text-center pb-5">
+                طيف التوحد
               </h3>
-              <p class="paragraph-normal text-gray-600">
-                Happy Women's Day 2022: Read on to know all about the history
-                and significance...
+              <p className="paragraph-normal text-gray-600 text-right">
+              التوحد يُعتبر حالة عصبية تنموية معقدة، تتسم بتحديات في التفاعل الاجتماعي، والتواصل، ونمط السلوك
               </p>
-              <a class="mt-3 block" href="#">
-                Read More
+              <a
+                className="mt-12 block text-blue-400 hover:underline text-center text-lg"
+                href="#"
+              >
+                المزيد
+              </a>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
+            <img
+              className="h-56 lg:h-60 w-full object-cover"
+              src={deaf}
+              alt=""
+            />
+            <div className="p-3">
+              <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2 text-center pb-5 ">
+             المشاكل السمعية
+              </h3>
+              <p className="paragraph-normal text-gray-600 text-right ">
+              الصمم فقدان القدرة على السمع، مما يجعل من الصعب سماع الأصوات والتواصل بشكل طبيعي
+              </p>
+              <a
+                className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0"
+                href="#"
+              >
+                المزيد
+              </a>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
+            <img
+              className="h-56 lg:h-60 w-full object-cover"
+              src={blind}
+              alt=""
+            />
+            <div className="p-3">
+              <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2 text-center pb-5">
+              المشاكل البصرية
+              </h3>
+              <p className="paragraph-normal text-gray-600 text-right ">
+              العمى هو حالة طبية تتميز بفقدان كبير للرؤية، مما يؤدي إلى عدم القدرة على رؤية أو إدراك المعلومات البصرية              </p>
+              <a
+                className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0"
+                href="#"
+              >
+                المزيد
+              </a>
+            </div>
+          </div>
+          <div className="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
+            <img
+              className="h-56 lg:h-60 w-full object-cover"
+              src={mind}
+              alt=""
+            />
+            <div className="p-3">
+              <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2 text-center pb-5">
+                المشاكل الذهنية
+              </h3>
+              <p className="paragraph-normal text-gray-600 text-right">
+              الاعاقه  الذهنية هي الاعاقة العقلية الناتجة عن خلل في الوظائف العليا للدماغ كالتركيز والعد والذاكرة والاتصال مع الآخرين وغيرها              </p>
+              <a
+                className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0"
+                href="#"
+              >
+                المزيد
               </a>
             </div>
           </div>
 
-          <div class="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
+          <div className="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
             <img
-              class="h-56 lg:h-60 w-full object-cover"
-              src="https://images.unsplash.com/photo-1607748862156-7c548e7e98f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHdvbWVuJTIwZW1wb3dlcm1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+              className="h-56 lg:h-60 w-full object-cover"
+              src={chronic}
               alt=""
             />
-            <div class="p-3">
-              <h3 class="font-semibold text-xl leading-6 text-gray-700 my-2">
-                International Women's Day 2022: Date, history, significance,
-                theme this year
+            <div className="p-3">
+              <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2 text-center pb-5">
+              الامراض المزمنة
               </h3>
-              <p class="paragraph-normal text-gray-600">
-                Happy Women's Day 2022: Read on to know all about the history
-                and significance...
-              </p>
-              <a class="mt-3 block" href="#">
-                Read More
+              <p className="paragraph-normal text-gray-600 text-right">
+              المرض المزمن هو حالة صحية تتسم بطول مدتها واستمرارها لفترة طويلة، وقد تستمر لعدة سنوات أو حتى مدى الحياة              </p>
+              <a
+                className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0 "
+                href="#"
+              >
+                المزيد
               </a>
             </div>
           </div>
-          <div class="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
+          <div className="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
             <img
-              class="h-56 lg:h-60 w-full object-cover"
-              src="https://images.unsplash.com/photo-1637419450536-378d5457abb8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTl8fHdvbWVuJTIwZW1wb3dlcm1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+              className="h-56 lg:h-60 w-full object-cover"
+              src={family}
               alt=""
             />
-            <div class="p-3">
-              <h3 class="font-semibold text-xl leading-6 text-gray-700 my-2">
-                International Women's Day 2022: Date, history, significance,
-                theme this year
+            <div className="p-3">
+              <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2 text-center pb-5">
+                حسن التعامل في العائلة
               </h3>
-              <p class="paragraph-normal text-gray-600">
-                Happy Women's Day 2022: Read on to know all about the history
-                and significance...
+              <p className="paragraph-normal text-gray-600 text-right">
+              يعتبر حسن التعامل في العائلة أساسيًا لصحة الأفراد، حيث يساهم في تعزيز و تحقيق التوازن النفسي والاجتماعي لكل فرد في الأسرة
               </p>
-              <a class="mt-3 block" href="#">
-                Read More
-              </a>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
-            <img
-              class="h-56 lg:h-60 w-full object-cover"
-              src="https://images.unsplash.com/photo-1621352404112-58e2468993a0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjd8fHdvbWVuJTIwZW1wb3dlcm1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-              alt=""
-            />
-            <div class="p-3">
-              <h3 class="font-semibold text-xl leading-6 text-gray-700 my-2">
-                International Women's Day 2022: Date, history, significance,
-                theme this year
-              </h3>
-              <p class="paragraph-normal text-gray-600">
-                Happy Women's Day 2022: Read on to know all about the history
-                and significance...
-              </p>
-              <a class="mt-3 block" href="#">
-                Read More{" "}
-              </a>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
-            <img
-              class="h-56 lg:h-60 w-full object-cover"
-              src="https://images.unsplash.com/photo-1607868894064-2b6e7ed1b324?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjl8fHdvbWVuJTIwZW1wb3dlcm1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-              alt=""
-            />
-            <div class="p-3">
-              <h3 class="font-semibold text-xl leading-6 text-gray-700 my-2">
-                International Women's Day 2022: Date, history, significance,
-                theme this year
-              </h3>
-              <p class="paragraph-normal text-gray-600">
-                Happy Women's Day 2022: Read on to know all about the history
-                and significance...
-              </p>
-              <a class="mt-3 block" href="#">
-                Read More
-              </a>
-            </div>
-          </div>
-
-          <div class="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
-            <img
-              class="h-56 lg:h-60 w-full object-cover"
-              src="https://images.unsplash.com/photo-1633329712176-4751f52ccc1b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzV8fHdvbWVuJTIwZW1wb3dlcm1lbnR8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
-              alt=""
-            />
-            <div class="p-3">
-              <h3 class="font-semibold text-xl leading-6 text-gray-700 my-2">
-                International Women's Day 2022: Date, history, significance,
-                theme this year
-              </h3>
-              <p class="paragraph-normal text-gray-600">
-                Happy Women's Day 2022: Read on to know all about the history
-                and significance...
-              </p>
-              <a class="mt-3 block" href="#">
-                Read More
+              <a
+                className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0"
+                href="#"
+              >
+                المزيد
               </a>
             </div>
           </div>
