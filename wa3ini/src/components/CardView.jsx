@@ -14,6 +14,7 @@ export default function CardView() {
             <h1 className="p-2 text-1xl sm:text-2xl">مرحبا بيك في</h1>
           </div>
           <hr />
+          
         </div>
 
         <div className="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 my-10">
