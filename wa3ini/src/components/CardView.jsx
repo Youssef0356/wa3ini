@@ -4,6 +4,7 @@ import blind from "../assets/blind.jpg";
 import mind from "../assets/mind.jpg";
 import chronic from "../assets/chronic.jpg";
 import family from "../assets/family.png";
+import Introduction from "./Introduction.jsx" ;
 export default function CardView() {
   return (
     <>
@@ -14,7 +15,7 @@ export default function CardView() {
             <h1 className="p-2 text-1xl sm:text-2xl">مرحبا بيك في</h1>
           </div>
           <hr />
-          
+          <Introduction />
         </div>
 
         <div className="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 my-10">
