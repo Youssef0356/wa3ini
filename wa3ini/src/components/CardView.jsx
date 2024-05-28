@@ -5,12 +5,14 @@ import mind from "../assets/mind.jpg";
 import chronic from "../assets/chronic.jpg";
 import family from "../assets/family.png";
 import Introduction from "./Introduction.jsx" ;
+import AutismHeader from "./Autism.jsx";
+
 export default function CardView() {
   return (
     <>
       <section className="min-h-screen w-full bg-gradient-to-br from-pink-50 to-indigo-100 p-8">
         <div className="text-center font-bold  text-gray-700 ">
-          <div className="flex items-center justify-center">
+          <div className="flex items-center justify-center pb-5">
             <h1 className="p-2 text-1xl sm:text-2xl">👋"وعيني"</h1>
             <h1 className="p-2 text-1xl sm:text-2xl">مرحبا بيك في</h1>
           </div>
