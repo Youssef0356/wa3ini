@@ -4,6 +4,27 @@ import blind from "../assets/blind.jpg";
 import mind from "../assets/mind.jpg";
 import chronic from "../assets/chronic.jpg";
 import family from "../assets/family.png";
+import wa3inipicture from "../assets/wa3inipicture.png";
+
+function Header() {
+  return (
+    <>
+      <div className="flex items-center  justify-center   h-64">
+        <img
+          className="w-full h-full object-cover "
+          src={wa3inipicture}
+          alt="image description"
+        />
+        <div className="absolute px-4 text-center text-lg text-white ">
+          <h1 className="text-8xl p-5">
+            وعيني
+          </h1>
+          <h4>طريقنا نحو التوعية</h4>
+        </div>
+      </div>
+    </>
+  );
+}
 
 function  Introduction(){
   return <>
@@ -39,7 +60,8 @@ function GridCard({title, description, imageLink}) {
 
 export default function CardView() {
   return (
-    <>
+    <div className="sm:ml-64">
+      <Header />
       <section className="min-h-screen w-full bg-gradient-to-br from-pink-50 to-indigo-100 p-8">
         <div className="text-center font-bold  text-gray-700 ">
           <div className="flex items-center justify-center pb-5">
@@ -59,6 +81,6 @@ export default function CardView() {
           <GridCard title="حسن التعامل في العائلة" imageLink={family} description="يعتبر حسن التعامل في العائلة أساسيًا لصحة الأفراد، حيث يساهم في تعزيز و تحقيق التوازن النفسي والاجتماعي لكل فرد في الأسرة" />
         </div>
       </section>
-    </>
+    </div>
   );
 }
