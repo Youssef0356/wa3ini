@@ -2,7 +2,7 @@ import React from 'react';
 import sidebar from "../assets/sidebar.jpg";
 
 
-function ListItem({ itemName }) {
+function ListItem({ itemName,link }) {
 
   const gradientbutton = {
     background: 'linear-gradient(to top, rgba(47, 56, 69, 1), rgba(72, 80, 92, 1))',
@@ -10,7 +10,7 @@ function ListItem({ itemName }) {
 
   return <>
     <li>
-      <a href="#" className="flex items-center m-1 p-1 mx-auto my-2 rounded-lg bg-gray-100 group text-white bg-gray-700 mx-3 hover:bg-gradient-to-b from-gray-500 to-gray-700">
+      <a href={link} target="_blank" className="pointer flex items-center m-1 p-1 mx-auto my-2 rounded-lg bg-gray-100 group text-white bg-gray-700 mx-3 hover:bg-gradient-to-b from-gray-500 to-gray-700">
         <span className="m-auto text-sm">
           {itemName}</span>
       </a>
@@ -75,17 +75,16 @@ export default function Sidebar() {
                 <ListItem itemName="طيف التوحد" />
                 <ListItem itemName="المشاكل السمعية" />
                 <ListItem itemName="المشاكل البصرية" />
-                <ListItem itemName="المشاكل الذهنية" />
+                <ListItem itemName="المشاكل النفسية" />
                 <ListItem itemName="الامراض المزمنة" />
                 <ListItem itemName="حسن التعامل في العائلة" />
               </div>
               <hr className='h-px bg-gray-400 border-0  mx-2' />
               <div className='py-1'>
-              <ListItem itemName="طلب إضافة مقطع" />
-                <ListItem itemName="الجمعيات الخيرية" />
-                <ListItem itemName="تواصل معنا" />
+                <ListItem itemName="طلب إضافة مقطع" link="https://forms.gle/d7mMqs4oGTnfZFLE8"/>
+                <ListItem itemName="الجمعيات الخيرية"/>
+                <ListItem itemName="تواصل معنا"  link="https://forms.gle/LfwErE7RPFXockPU9"/>
                 <ListItem itemName="من نحن؟" />
-                
               </div>
             </ul>
 
