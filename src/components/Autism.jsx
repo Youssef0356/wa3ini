@@ -123,7 +123,7 @@ const people = [
     )
   }
   
-export default function App(){
+export default function Autism(){
     return <>
     <AutismHeader />
     <AutismContent />

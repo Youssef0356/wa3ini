@@ -5,7 +5,31 @@ import mind from "../assets/mind.jpg";
 import chronic from "../assets/chronic.jpg";
 import family from "../assets/family.png";
 import Introduction from "./Introduction.jsx" ;
-import AutismHeader from "./Autism.jsx";
+
+
+function Card(title,description) {
+  <div className="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
+            <img
+              className="h-56 lg:h-60 w-full object-cover"
+              src={deaf}
+              alt=""
+            />
+            <div className="p-3">
+              <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2 text-center pb-5 ">
+             {{title}}
+              </h3>
+              <p className="paragraph-normal text-gray-600 text-right ">
+              {description}
+              </p>
+              <a
+                className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0"
+                href="#"
+              >
+                المزيد
+              </a>
+            </div>
+          </div>
+}
 
 export default function CardView() {
   return (
@@ -21,6 +45,7 @@ export default function CardView() {
         </div>
 
         <div className="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 my-10">
+          <Card title="سلام" description="التوحد يُعتبر حالة عصبية تنموية معقدة، تتسم بتحديات في التفاعل الاجتماعي، والتواصل، ونمط السلوك"/>
           <div className="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
             <img
               className="h-56 lg:h-60 w-full object-cover"
@@ -42,6 +67,8 @@ export default function CardView() {
               </a>
             </div>
           </div>
+          <Card title="سلام" description="التوحد يُعتبر حالة عصبية تنموية معقدة، تتسم بتحديات في التفاعل الاجتماعي، والتواصل، ونمط السلوك"/>
+
           <div className="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
             <img
               className="h-56 lg:h-60 w-full object-cover"
