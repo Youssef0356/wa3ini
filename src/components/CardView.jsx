@@ -4,31 +4,31 @@ import blind from "../assets/blind.jpg";
 import mind from "../assets/mind.jpg";
 import chronic from "../assets/chronic.jpg";
 import family from "../assets/family.png";
-import Introduction from "./Introduction.jsx" ;
+import Introduction from "./Introduction.jsx";
 
 
-function Card(title,description) {
+function Card(title, description) {
   <div className="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
-            <img
-              className="h-56 lg:h-60 w-full object-cover"
-              src={deaf}
-              alt=""
-            />
-            <div className="p-3">
-              <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2 text-center pb-5 ">
-             {{title}}
-              </h3>
-              <p className="paragraph-normal text-gray-600 text-right ">
-              {description}
-              </p>
-              <a
-                className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0"
-                href="#"
-              >
-                المزيد
-              </a>
-            </div>
-          </div>
+    <img
+      className="h-56 lg:h-60 w-full object-cover"
+      src={deaf}
+      alt=""
+    />
+    <div className="p-3">
+      <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2 text-center pb-5 ">
+        {{ title }}
+      </h3>
+      <p className="paragraph-normal text-gray-600 text-right ">
+        {description}
+      </p>
+      <a
+        className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0"
+        href="#"
+      >
+        المزيد
+      </a>
+    </div>
+  </div>
 }
 
 export default function CardView() {
@@ -45,7 +45,7 @@ export default function CardView() {
         </div>
 
         <div className="grid justify-center md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 my-10">
-          <Card title="سلام" description="التوحد يُعتبر حالة عصبية تنموية معقدة، تتسم بتحديات في التفاعل الاجتماعي، والتواصل، ونمط السلوك"/>
+          <Card title="سلام" description="التوحد يُعتبر حالة عصبية تنموية معقدة، تتسم بتحديات في التفاعل الاجتماعي، والتواصل، ونمط السلوك" />
           <div className="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
             <img
               className="h-56 lg:h-60 w-full object-cover"
@@ -57,7 +57,7 @@ export default function CardView() {
                 طيف التوحد
               </h3>
               <p className="paragraph-normal text-gray-600 text-right">
-              التوحد يُعتبر حالة عصبية تنموية معقدة، تتسم بتحديات في التفاعل الاجتماعي، والتواصل، ونمط السلوك
+                التوحد يُعتبر حالة عصبية تنموية معقدة، تتسم بتحديات في التفاعل الاجتماعي، والتواصل، ونمط السلوك
               </p>
               <a
                 className="mt-12 block text-blue-400 hover:underline text-center text-lg"
@@ -67,7 +67,7 @@ export default function CardView() {
               </a>
             </div>
           </div>
-          <Card title="سلام" description="التوحد يُعتبر حالة عصبية تنموية معقدة، تتسم بتحديات في التفاعل الاجتماعي، والتواصل، ونمط السلوك"/>
+          <Card title="سلام" description="التوحد يُعتبر حالة عصبية تنموية معقدة، تتسم بتحديات في التفاعل الاجتماعي، والتواصل، ونمط السلوك" />
 
           <div className="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
             <img
@@ -77,10 +77,10 @@ export default function CardView() {
             />
             <div className="p-3">
               <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2 text-center pb-5 ">
-             المشاكل السمعية
+                المشاكل السمعية
               </h3>
               <p className="paragraph-normal text-gray-600 text-right ">
-              الصمم فقدان القدرة على السمع، مما يجعل من الصعب سماع الأصوات والتواصل بشكل طبيعي
+                الصمم فقدان القدرة على السمع، مما يجعل من الصعب سماع الأصوات والتواصل بشكل طبيعي
               </p>
               <a
                 className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0"
@@ -98,10 +98,10 @@ export default function CardView() {
             />
             <div className="p-3">
               <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2 text-center pb-5">
-              المشاكل البصرية
+                المشاكل البصرية
               </h3>
               <p className="paragraph-normal text-gray-600 text-right ">
-              العمى هو حالة طبية تتميز بفقدان كبير للرؤية، مما يؤدي إلى عدم القدرة على رؤية أو إدراك المعلومات البصرية              </p>
+                العمى هو حالة طبية تتميز بفقدان كبير للرؤية، مما يؤدي إلى عدم القدرة على رؤية أو إدراك المعلومات البصرية              </p>
               <a
                 className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0"
                 href="#"
@@ -121,7 +121,7 @@ export default function CardView() {
                 المشاكل الذهنية
               </h3>
               <p className="paragraph-normal text-gray-600 text-right">
-              الاعاقه  الذهنية هي الاعاقة العقلية الناتجة عن خلل في الوظائف العليا للدماغ كالتركيز والعد والذاكرة والاتصال مع الآخرين وغيرها              </p>
+                الاعاقه  الذهنية هي الاعاقة العقلية الناتجة عن خلل في الوظائف العليا للدماغ كالتركيز والعد والذاكرة والاتصال مع الآخرين وغيرها              </p>
               <a
                 className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0"
                 href="#"
@@ -139,10 +139,10 @@ export default function CardView() {
             />
             <div className="p-3">
               <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2 text-center pb-5">
-              الامراض المزمنة
+                الامراض المزمنة
               </h3>
               <p className="paragraph-normal text-gray-600 text-right">
-              المرض المزمن هو حالة صحية تتسم بطول مدتها واستمرارها لفترة طويلة، وقد تستمر لعدة سنوات أو حتى مدى الحياة              </p>
+                المرض المزمن هو حالة صحية تتسم بطول مدتها واستمرارها لفترة طويلة، وقد تستمر لعدة سنوات أو حتى مدى الحياة              </p>
               <a
                 className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0 "
                 href="#"
@@ -162,7 +162,7 @@ export default function CardView() {
                 حسن التعامل في العائلة
               </h3>
               <p className="paragraph-normal text-gray-600 text-right">
-              يعتبر حسن التعامل في العائلة أساسيًا لصحة الأفراد، حيث يساهم في تعزيز و تحقيق التوازن النفسي والاجتماعي لكل فرد في الأسرة
+                يعتبر حسن التعامل في العائلة أساسيًا لصحة الأفراد، حيث يساهم في تعزيز و تحقيق التوازن النفسي والاجتماعي لكل فرد في الأسرة
               </p>
               <a
                 className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0"
