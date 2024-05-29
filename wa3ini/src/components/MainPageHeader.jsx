@@ -2,7 +2,7 @@ import wa3inipicture from "../assets/wa3inipicture.png";
 function Header() {
   return (
     <>
-      <div className="  flex items-center  justify-center h-full ">
+      <div className="flex items-center  justify-center   h-64">
         <img
           className="w-full h-full object-cover "
           src={wa3inipicture}

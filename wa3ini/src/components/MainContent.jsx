@@ -1,5 +1,7 @@
-import Header from "./Header.jsx";
+import Header from "./MainPageHeader.jsx";
 import CardView from "./CardView.jsx";
+import App from "./Autism.jsx";
+
 function Card() {
     return (
       <div className="bg-pink-500 lg:col-span-3 md:col-span-4 sm:col-span-6 col-span-12"></div>
@@ -8,9 +10,8 @@ function Card() {
 
 export default function MainContent() {
     return <>
-      <div className=" bg-blue-500 sm:ml-64">
-        <div className="h-64"> <Header /></div>
-        <CardView />
+      <div className=" sm:ml-64">
+        <App />
       </div>
     </>
   }
