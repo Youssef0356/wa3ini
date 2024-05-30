@@ -1,5 +1,6 @@
 import React from 'react';
 import sidebar from "../assets/sidebar.jpg";
+import { Link } from "react-router-dom";
 
 
 function ListItem({ itemName,link }) {
@@ -10,7 +11,7 @@ function ListItem({ itemName,link }) {
 
   return <>
     <li>
-      <a href={link} target="_blank" className="pointer flex items-center m-1 p-1 mx-auto my-2 rounded-lg bg-gray-100 group text-white bg-gray-700 mx-3 hover:bg-gradient-to-b from-gray-500 to-gray-700">
+      <a href={link} target="_blank" className="pointer flex items-center m-1 p-1  my-2 rounded-lg  group text-white bg-gray-700 mx-3 hover:bg-gradient-to-b from-gray-500 to-gray-700">
         <span className="m-auto text-sm">
           {itemName}</span>
       </a>
@@ -84,7 +85,9 @@ export default function Sidebar() {
                 <ListItem itemName="طلب إضافة مقطع" link="https://forms.gle/d7mMqs4oGTnfZFLE8"/>
                 <ListItem itemName="الجمعيات الخيرية"/>
                 <ListItem itemName="تواصل معنا"  link="https://forms.gle/LfwErE7RPFXockPU9"/>
-                <ListItem itemName="من نحن؟" />
+                <Link to="/AboutUS">
+                  <ListItem itemName="من نحن؟"  />
+                </Link>
               </div>
             </ul>
 
