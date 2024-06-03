@@ -1,7 +1,7 @@
 import autism from "../assets/autism.jpg";
 import React, { useState } from "react";
 import "./gridviewVideos.css";
-import JsonFile from "../assets/Autism.json";
+import JsonFile from "../assets/Blindness.json";
 
 function Gridview({ index }) {
   let SubCategory = JsonFile[index].data;

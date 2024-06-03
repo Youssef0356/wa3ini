@@ -1,0 +1,5 @@
+@layer utilities {
+  .bg-gradient-radial {
+    background: radial-gradient(circle, rgb(255, 255, 255), #c4c4c4); /* #d1d5db is gray-300 */
+  }
+}

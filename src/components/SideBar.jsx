@@ -1,8 +1,5 @@
 import React from 'react';
 import sidebar from "../assets/sidebar.jpg";
-import { Link } from "react-router-dom";
-
-
 function ListItem({ itemName,link }) {
 
   const gradientbutton = {
@@ -11,7 +8,7 @@ function ListItem({ itemName,link }) {
 
   return <>
     <li>
-      <a href={link} target="_blank" className="pointer flex items-center m-1 p-1  my-2 rounded-lg  group text-white bg-gray-700 mx-3 hover:bg-gradient-to-b from-gray-500 to-gray-700">
+      <a href={link} target="_blank" className="pointer flex items-center m-1 p-1 mx-auto my-2 rounded-lg group text-white bg-gray-700 hover:bg-gradient-to-b from-gray-500 to-gray-700">
         <span className="m-auto text-sm">
           {itemName}</span>
       </a>
@@ -28,7 +25,7 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className=" sticky top-0 w-screen bg-white">
+      <div className=" fixed top-0 w-screen bg-white">
         <button
           data-drawer-target="sidebar-multi-level-sidebar"
           data-drawer-toggle="sidebar-multi-level-sidebar"
@@ -85,9 +82,7 @@ export default function Sidebar() {
                 <ListItem itemName="طلب إضافة مقطع" link="https://forms.gle/d7mMqs4oGTnfZFLE8"/>
                 <ListItem itemName="الجمعيات الخيرية"/>
                 <ListItem itemName="تواصل معنا"  link="https://forms.gle/LfwErE7RPFXockPU9"/>
-                <Link to="/AboutUS">
-                  <ListItem itemName="من نحن؟"  />
-                </Link>
+                <ListItem itemName="من نحن؟" />
               </div>
             </ul>
 
