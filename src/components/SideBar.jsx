@@ -63,7 +63,7 @@ export default function Sidebar() {
           />
           <div style={gradientStyle} className="z-5 absolute h-40 w-full"></div>
           <div className="z-10 text-white flex items-center flex-col absolute gap-3 mb-5 shadow-2xl">
-            <h1 className="text-3xl">وعيني</h1>
+            <h1 className="text-3xl">وَعّينِي</h1>
             <h1 className="text-sm">مع بعضنا نصنعوا الأمل</h1>
           </div>
         </div>
@@ -74,6 +74,9 @@ export default function Sidebar() {
           <div className="flex flex-col justify-between h-full">
             <ul className="space-y-2 font-medium">
               <div className="mb-5">
+                <Link to="/">
+                <ListItem itemName="الصفحة الرئيسية" />
+                </Link>
                 <Link to="/Autism">
                   <ListItem itemName="طيف التوحد" />
                 </Link>
@@ -99,7 +102,6 @@ export default function Sidebar() {
                   itemName="طلب إضافة مقطع"
                   link="https://forms.gle/d7mMqs4oGTnfZFLE8"
                 />
-                <ListItem itemName="الجمعيات الخيرية" />
                 <ListItem
                   itemName="تواصل معنا"
                   link="https://forms.gle/LfwErE7RPFXockPU9"

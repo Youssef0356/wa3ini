@@ -11,7 +11,7 @@ export default function Header({ title }) {
                   <div className="absolute inset-0  bg-gradient-to-t to-gray-900 from-transparent h-40 mt-12 sm:mt-0"></div>
 
           <div className="absolute inset-0  bg-gradient-to-t from-gray-900 to-transparent h-40 mt-12 sm:mt-0"></div>
-          <div className="absolute flex items-center justify-center pb-2 text-white font-semibold">
+          <div className="absolute flex items-center justify-center pb-2 text-white font-semibold text-2xl">
               <h1 className="p-1 text-1xl sm:text-3xl">{title}</h1>
             </div>
         </div>

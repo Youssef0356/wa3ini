@@ -3,3 +3,41 @@
     background: radial-gradient(circle, rgb(255, 255, 255), #c4c4c4); /* #d1d5db is gray-300 */
   }
 }
+#left {
+  animation: slideIn 1s ease-in-out both; 
+ 
+  
+}
+#left:hover {
+ scale: 1.03;
+  transition: all 0.2s ease-in-out;
+}
+#right{
+  animation: slideright 1s ease-in-out both;  
+}
+@keyframes slideright {
+  0% {
+    transform: translateX(50%); 
+    opacity: 0;
+    filter: blur(1);
+  }
+  100% {
+    transform: translateX(0); 
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+@keyframes slideIn {
+  0% {
+    transform: translateX(-30%); 
+    opacity: 0;
+    filter: blur(1);
+
+  }
+  100% {
+    transform: translateX(0); 
+    opacity: 1;
+    filter: blur(0);
+
+  }
+}

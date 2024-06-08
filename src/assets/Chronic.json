@@ -81,5 +81,68 @@
                 "iframeSrc": "https://www.youtube.com/watch?v=4o6-PJe0JZ4"
             }
         ]
+    },
+    {
+        "name": "امراض السكري     ",
+        "data": [
+            {
+                "title": "Diabetes symptoms",
+                "iframeSrc": "https://www.youtube.com/watch?v=GQbBYIGieEE&t=5s"
+            },
+            {
+                "title": "مرض السكري Diabetes ",
+                "iframeSrc": "https://www.youtube.com/watch?v=k68eBsFtpWA"
+            },
+            {
+                "title": "كيف يحدث مرض السكري | أعراضه | طرق الوقاية منه ؟                ",
+                "iframeSrc": "https://www.youtube.com/watch?v=C2SdRIyoiPE"
+            },
+            {
+                "title": "السكري                ",
+                "iframeSrc": "https://www.youtube.com/watch?v=I-CzjjXPbKc"
+            }
+        ]
+    },
+    {
+        "name": "امراض السرطان     ",
+        "data": [
+            {
+                "title": "اسباب امراض السرطان | Cancer causes",
+                "iframeSrc": "https://www.youtube.com/watch?v=xSSe-mRQNzA"
+            },
+            {
+                "title": "هل السرطان ملهوش علاج؟ ",
+                "iframeSrc": "https://www.youtube.com/watch?v=xGauAsw9Zs4"
+            },
+            {
+                "title": "What is cancer?                ",
+                "iframeSrc": "https://www.youtube.com/watch?v=bQ-H-uwsI70"
+            },
+            {
+                "title": "بماذا يشعر مريض السرطان                ",
+                "iframeSrc": "https://www.youtube.com/watch?v=DMy1AVOr2Vo"
+            }
+        ]
+    },
+    {
+        "name": "امراض القلب     ",
+        "data": [
+            {
+                "title": "الأعراض الشائعة للإصابة بمرض القلب 💚",
+                "iframeSrc": "https://www.youtube.com/watch?v=7CMyq46guMY"
+            },
+            {
+                "title": "تعلم كيف تتخلص من الخوف من أمراض القلب ",
+                "iframeSrc": "https://www.youtube.com/watch?v=wR0mim1ugK4"
+            },
+            {
+                "title": "أمراض القلب والموت المفاجى مع الدكتور سامح علام",
+                "iframeSrc": "https://www.youtube.com/watch?v=lBIX1raBMdY"
+            },
+            {
+                "title": "علاج انسداد الشرايين والقلب والوقاية منه بدون ادوية / المختصر المفيد                ",
+                "iframeSrc": "https://www.youtube.com/watch?v=u1OhGUwHxNE"
+            }
+        ]
     }
 ]

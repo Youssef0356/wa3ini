@@ -27,7 +27,7 @@ function Header() {
           <h4>طريقنا نحو التوعية</h4>
         </div> */}
         <div className="absolute flex items-center justify-center pb-2   text-white font-semibold">
-            <h1 className="p-1 text-lg sm:text-3xl">👋"وعيني"</h1>
+            <h1 className="p-1 text-lg sm:text-3xl">👋"وَعّينِي"</h1>
             <h1 className="p-1 text-lg sm:text-3xl">مرحبا بيك في</h1>
           </div>
       </div>
@@ -39,7 +39,7 @@ function Introduction() {
   return (
     <>
       <h2 className=" border-solid rounded-sm p-5  font-semibold text-center  mx-2 sm:mx-10">
-        عندك شخص عزيز عليك تحب تواسيه ولا تعاونو اما متجمش 🤝? موش مشكل الحل موجود عنا
+        عندك شخص عزيز عليك تحب تواسيه ولا تعاونو اما متجمش 🤝؟ موش مشكل الحل موجود عنا
         نعلموك كل شيء متعلق بذوي الاحتياجات الخاصة . مجموعة من الفيديوهات
         لنشر الوعي وفهم الاخر
       </h2>
@@ -48,34 +48,11 @@ function Introduction() {
   );
 }
 
-function GridCard({ title, description, imageLink, to }) {
-  // return <><div className="bg-white rounded-lg border shadow-md max-w-xs md:max-w-none overflow-hidden">
-  //   <Link to={to}>
-  //     <img
-  //       className="h-56 lg:h-60 w-full object-cover"
-  //       src={imageLink}
-  //     />
-  //     <div className="p-3">
-  //       <h3 className="font-semibold text-xl leading-6 text-gray-700 my-2 text-center pb-5 ">
-  //         {title}
-  //       </h3>
-  //       <p className="paragraph-normal text-gray-600 text-right ">
-  //         {description}
-  //       </p>
-  //       <a
-  //         className="mt-12 block text-blue-400 hover:underline text-center text-lg bottom-0"
-  //         href="#"
-  //       >
-  //         المزيد
-  //       </a>
-  //     </div>
-  //   </Link>
-  // </div></>;
-  
+function GridCard({ title, description, imageLink, to ,transition ,index}) {
   return (
-    <Link to={to}>
-    <div className="h-48 relative rounded-2xl overflow-hidden hover:scale-105 transition-all ">
-      <img src={imageLink} alt="image" className="absolute object-cover rounded-2xl w-full h-48"/>
+    <Link to={to} >
+<div className="h-48 relative rounded-2xl overflow-hidden " id={transition} style={{ animationDelay: `${index * 0.2}s` }}>
+<img src={imageLink} alt="image" className="absolute object-cover rounded-2xl w-full h-48"/>
       <div className="absolute inset-0 bg-gradient-to-t from-gray-800 to-transparent h-full"></div> 
       <div className="absolute inset-0 text-white text-center flex flex-col justify-end p-4">
         <h2 className="text-xl font-bold">{title}</h2>
@@ -99,12 +76,12 @@ export default function Home() {
         </div>
 
         <div className="grid justify-center grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 lg:gap-7 my-10">
-          <GridCard title="طيف التوحد" to="/autism" imageLink={autism} description="التوحد يُعتبر حالة عصبية تنموية معقدة، تتسم بتحديات في التفاعل الاجتماعي، والتواصل، ونمط السلوك" />
-          <GridCard title="المشاكل السمعية" to="/Deafness" imageLink={deaf} description="الصمم فقدان القدرة على السمع، مما يجعل من الصعب سماع الأصوات والتواصل بشكل طبيعي" />
-          <GridCard title="المشاكل البصرية" to="/Blindness" imageLink={blind} description="العمى هو حالة طبية تتميز بفقدان كبير للرؤية، مما يؤدي إلى عدم القدرة على رؤية أو إدراك المعلومات البصرية " />
-          <GridCard title="المشاكل العقلية" to="/Mindproblems" imageLink={mind} description="الاعاقه  الذهنية هي الاعاقة العقلية الناتجة عن خلل في الوظائف العليا للدماغ كالتركيز والعد والذاكرة والاتصال مع الآخرين وغيرها" />
-          <GridCard title="الامراض المزمنة" to="/Chronic" imageLink={chronic} description="المرض المزمن هو حالة صحية تتسم بطول مدتها واستمرارها لفترة طويلة، وقد تستمر لعدة سنوات أو حتى مدى الحياة" />
-          <GridCard title="المشاكل الحركية والشلل" to="/Paralysis" imageLink={paralysis} description="الشلل هو فقدان القدرة على الحركة (وأحياناً الإحساس) في جزء أو معظم الجسم، وعادةً ما يكون نتيجة لتلف في الجهاز العصبي" />
+          <GridCard transition="left" index="1" title="طيف التوحد" to="/autism" imageLink={autism} description="التوحد يُعتبر حالة عصبية تنموية معقدة، تتسم بتحديات في التفاعل الاجتماعي، والتواصل، ونمط السلوك" />
+          <GridCard transition="left" index="2"  title="المشاكل السمعية" to="/Deafness" imageLink={deaf} description="الصمم فقدان القدرة على السمع، مما يجعل من الصعب سماع الأصوات والتواصل بشكل طبيعي" />
+          <GridCard transition="left" index="3"title="المشاكل البصرية" to="/Blindness" imageLink={blind} description="العمى هو حالة طبية تتميز بفقدان كبير للرؤية، مما يؤدي إلى عدم القدرة على رؤية أو إدراك المعلومات البصرية " />
+          <GridCard transition="left" index="4"  title="المشاكل العقلية" to="/Mindproblems" imageLink={mind} description="الاعاقه  الذهنية هي الاعاقة العقلية الناتجة عن خلل في الوظائف العليا للدماغ كالتركيز والعد والذاكرة والاتصال مع الآخرين وغيرها" />
+          <GridCard transition="left" index="5"title="الامراض المزمنة" to="/Chronic" imageLink={chronic} description="المرض المزمن هو حالة صحية تتسم بطول مدتها واستمرارها لفترة طويلة، وقد تستمر لعدة سنوات أو حتى مدى الحياة" />
+          <GridCard transition="left" index="6"  title="المشاكل الحركية والشلل" to="/Paralysis" imageLink={paralysis} description="الشلل هو فقدان القدرة على الحركة (وأحياناً الإحساس) في جزء أو معظم الجسم، وعادةً ما يكون نتيجة لتلف في الجهاز العصبي" />
         </div>
       </section>
       <section className="flex w-full bg-gradient-radial from-white to-gray-800 p-8">
