@@ -6,27 +6,29 @@ import chronic from "../assets/chronic.jpg";
 import paralysis from "../assets/paralysis.jpg";
 import { Link } from "react-router-dom";
 import { DiscussionEmbed } from 'disqus-react';
-import wa3inipicture from "../assets/wa3inipicture.png";
+import wa3inipicture from "../assets/coverv2.jpg";
 import './gradient.css';
 function Header() {
   return (
     <>
-      <div className="flex items-center justify-center h-40">
+      <div className="flex items-center justify-center h-40  ">
         <img
-          className="w-full h-full object-cover "
+          className="w-full h-full object-cover"
           src={wa3inipicture}
           alt="image description"
         />
-        <div className="absolute inset-0  bg-gradient-to-t from-gray-900 to-transparent h-40 mt-12 sm:mt-0"></div>
+        <div className="absolute inset-0  bg-gradient-to-t to-gray-900 from-transparent h-40 mt-12 sm:mt-0"></div>
+
+        <div className="absolute inset-0   bg-gradient-to-t from-gray-900 to-transparent h-40 mt-12 sm:mt-0"></div>
         {/* <div className="absolute px-4 text-center text-md text-white mb-4">
           <h1 className="text-4xl p-2">
             وعيني
           </h1>
           <h4>طريقنا نحو التوعية</h4>
         </div> */}
-        <div className="absolute flex items-center justify-center pb-2 text-white font-semibold">
-            <h1 className="p-1 text-1xl sm:text-3xl">👋"وعيني"</h1>
-            <h1 className="p-1 text-1xl sm:text-3xl">مرحبا بيك في</h1>
+        <div className="absolute flex items-center justify-center pb-2   text-white font-semibold">
+            <h1 className="p-1 text-lg sm:text-3xl">👋"وعيني"</h1>
+            <h1 className="p-1 text-lg sm:text-3xl">مرحبا بيك في</h1>
           </div>
       </div>
     </>
@@ -37,10 +39,9 @@ function Introduction() {
   return (
     <>
       <h2 className=" border-solid rounded-sm p-5  font-semibold text-center  mx-2 sm:mx-10">
-        عندك شخص عزيز عليك تحب تواسيه ولا تعاونو اما متجمش ? 👥تحب تتواصل معاه
-        اما احوالو العقلية او الجسدية متسمحلكش 🤝? موش مشكل الحل موجود عنا
+        عندك شخص عزيز عليك تحب تواسيه ولا تعاونو اما متجمش 🤝? موش مشكل الحل موجود عنا
         نعلموك كل شيء متعلق بذوي الاحتياجات الخاصة . مجموعة من الفيديوهات
-        المتعلقة بالامراض الخاصة
+        لنشر الوعي وفهم الاخر
       </h2>
       <hr></hr>
     </>
@@ -73,7 +74,7 @@ function GridCard({ title, description, imageLink, to }) {
   
   return (
     <Link to={to}>
-    <div className="h-48 relative rounded-2xl overflow-hidden">
+    <div className="h-48 relative rounded-2xl overflow-hidden hover:scale-105 transition-all ">
       <img src={imageLink} alt="image" className="absolute object-cover rounded-2xl w-full h-48"/>
       <div className="absolute inset-0 bg-gradient-to-t from-gray-800 to-transparent h-full"></div> 
       <div className="absolute inset-0 text-white text-center flex flex-col justify-end p-4">

@@ -1,6 +1,6 @@
 .dropdown-menu {
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Adjust columns as needed */
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 10px;
   padding: 10px;
   background-color: white;
@@ -15,28 +15,11 @@
   padding: 10px;
   border: 1px solid #ccc;
   background-color: #f9f9f9;
+  border-radius: 5px;
   width: 100%;
   height: 100%;
 }
 
 .fa-caret-down.rotate-180 {
   transform: rotate(180deg);
-}
-@media screen and (min-width: 300px) and (max-width: 420px) {
-  .screensizes {
-    width: 150px;
-    height: 100%;
-  }
-}
-@media screen and (min-width: 750px) and (max-width: 1020px) {
-  .screensizes {
-    width: 200px;
-    height: 100%;
-  }
-}
-@media screen and (min-width: 1020px) and (max-width: 1500px) {
-  .screensizes {
-    width: 200px;
-    height: 100%;
-  }
 }

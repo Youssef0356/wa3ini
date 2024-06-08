@@ -1,25 +1,19 @@
-import React from "react";
-import sidebar from "../assets/sidebar.jpg";
 import { Link } from "react-router-dom";
+import React from "react";
+import sidebarImage from "../assets/sidebar.jpg";
 
 function ListItem({ itemName, link }) {
-  const gradientbutton = {
-    background:
-      "linear-gradient(to top, rgba(47, 56, 69, 1), rgba(72, 80, 92, 1))",
-  };
-
   return (
-    <>
-      <li>
-        <a
-          href={link}
-          target="_blank"
-          className="pointer flex items-center m-1 p-1 mx-auto my-2 rounded-lg group text-white bg-gray-700 hover:bg-gradient-to-b from-gray-500 to-gray-700"
-        >
-          <span className="m-auto text-sm">{itemName}</span>
-        </a>
-      </li>
-    </>
+    <li>
+      <a
+        href={link}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="flex justify-center p-2 m-1 mx-auto my-2 rounded-lg bg-gray-700 text-white hover:bg-gradient-to-b from-gray-500 to-gray-700"
+      >
+        <span className="text-sm">{itemName}</span>
+      </a>
+    </li>
   );
 }
 
@@ -31,13 +25,13 @@ export default function Sidebar() {
 
   return (
     <>
-      <div className=" fixed top-0 w-screen bg-white">
+      <div className="sm:hidden fixed top-0 w-full bg-white z-50">
         <button
           data-drawer-target="sidebar-multi-level-sidebar"
           data-drawer-toggle="sidebar-multi-level-sidebar"
           aria-controls="sidebar-multi-level-sidebar"
           type="button"
-          className="inline-flex items-center p-2 m-1 text-sm text-gray-500 rounded-lg sm:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          className="inline-flex items-center p-2 m-1 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
         >
           <span className="sr-only">Open sidebar</span>
           <svg
@@ -58,14 +52,14 @@ export default function Sidebar() {
 
       <aside
         id="sidebar-multi-level-sidebar"
-        className="fixed top-0 left-0 z-40 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-gray-800"
+        className="fixed top-0 left-0 z-50 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-gray-800"
         aria-label="Sidebar"
       >
         <div className="h-40 flex justify-center items-center overflow-hidden w-full">
           <img
-            src={sidebar}
-            alt="sidebar image"
-            className="reltive w-full object-cover"
+            src={sidebarImage}
+            alt="sidebar"
+            className="relative w-full object-cover"
           />
           <div style={gradientStyle} className="z-5 absolute h-40 w-full"></div>
           <div className="z-10 text-white flex items-center flex-col absolute gap-3 mb-5 shadow-2xl">
@@ -76,7 +70,7 @@ export default function Sidebar() {
 
         <hr className="h-px bg-gray-400 border-0 mx-5" />
 
-        <div className="h-full px-3 py-3 overflow-y-auto bg-gray-50 dark:bg-gray-800">
+        <div className="h-full px-3 py-3 overflow-y-auto bg-gray-50 dark:bg-gray-800  ">
           <div className="flex flex-col justify-between h-full">
             <ul className="space-y-2 font-medium">
               <div className="mb-5">
@@ -85,18 +79,18 @@ export default function Sidebar() {
                 </Link>
                 <Link to="/Deafness">
                   <ListItem itemName="المشاكل السمعية" />
-                </Link >
+                </Link>
                 <Link to="/Blindness">
                   <ListItem itemName="المشاكل البصرية" />
                 </Link>
                 <Link to="/Mindproblems">
-                <ListItem itemName="المشاكل العقلية" />
+                  <ListItem itemName="المشاكل العقلية" />
                 </Link>
                 <Link to="/Chronic">
-                <ListItem itemName="الامراض المزمنة" />
+                  <ListItem itemName="الامراض المزمنة" />
                 </Link>
                 <Link to="/Paralysis">
-                <ListItem itemName="المشاكل الحركية"/>
+                  <ListItem itemName="المشاكل الحركية" />
                 </Link>
               </div>
               <hr className="h-px bg-gray-400 border-0  mx-2" />
@@ -115,12 +109,11 @@ export default function Sidebar() {
                 </Link>
               </div>
             </ul>
-
-            <div className="absolute bottom-0 py-4 flex self-center">
-              <p className="text-sm font-medium truncate text-gray-400">
-                made with ❤️ from Tunisia
-              </p>
-            </div>
+          </div>
+          <div className="absolute bottom-0 py-4 flex justify-center items-center w-full pr-6">
+            <p className="text-sm font-medium truncate text-center text-gray-400">
+              made with ❤️ from Tunisia
+            </p>
           </div>
         </div>
       </aside>
