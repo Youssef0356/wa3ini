@@ -1,37 +1,68 @@
 import { Link } from "react-router-dom";
-import React from "react";
 import sidebarImage from "../assets/sidebar.jpg";
+import { useEffect } from "react";
 
-function ListItem({ itemName, link }) {
-  return (
-    <li>
-      <a
-        href={link}
-        target="_blank"
-        rel="noopener noreferrer"
-        className="flex justify-center p-2 m-1 mx-auto my-2 rounded-lg bg-gray-700 text-white hover:bg-gradient-to-b from-gray-500 to-gray-700"
-      >
-        <span className="text-sm">{itemName}</span>
-      </a>
-    </li>
-  );
+function ListItem({ itemName, link, external }) {
+  if (external) {
+    return (
+      <li>
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="flex justify-center p-2 m-1 mx-auto my-2 rounded-lg bg-gray-700 text-white hover:bg-gradient-to-b from-gray-500 to-gray-700"
+        >
+          <span className="text-sm">{itemName}</span>
+        </a>
+      </li>
+    );
+  } else {
+    return (
+      <li>
+        <Link
+          to={link}
+          className="flex justify-center p-2 m-1 mx-auto my-2 rounded-lg bg-gray-700 text-white hover:bg-gradient-to-b from-gray-500 to-gray-700"
+        >
+          <span className="text-sm">{itemName}</span>
+        </Link>
+      </li>
+    );
+  }
 }
 
 export default function Sidebar() {
   const gradientStyle = {
-    background:
-      "linear-gradient(to bottom, rgba(31, 41, 55, 0.3), rgba(31, 41, 55, 1))",
+    background: "linear-gradient(to bottom, rgba(31, 41, 55, 0.3), rgba(31, 41, 55, 1))",
   };
+
+  const handleDrawerToggle = (event) => {
+    event.stopPropagation();
+    const sidebar = document.getElementById("sidebar-multi-level-sidebar");
+    sidebar.classList.toggle("-translate-x-full");
+  };
+
+  const handleOutsideClick = (event) => {
+    const sidebar = document.getElementById("sidebar-multi-level-sidebar");
+    if (sidebar && !sidebar.contains(event.target)) {
+      sidebar.classList.add("-translate-x-full");
+    }
+  };
+
+  useEffect(() => {
+    document.addEventListener("click", handleOutsideClick);
+    return () => {
+      document.removeEventListener("click", handleOutsideClick);
+    };
+  }, []);
 
   return (
     <>
       <div className="sm:hidden fixed top-0 w-full bg-white z-50">
         <button
-          data-drawer-target="sidebar-multi-level-sidebar"
-          data-drawer-toggle="sidebar-multi-level-sidebar"
           aria-controls="sidebar-multi-level-sidebar"
           type="button"
           className="inline-flex items-center p-2 m-1 text-sm text-gray-500 rounded-lg hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200"
+          onClick={handleDrawerToggle}
         >
           <span className="sr-only">Open sidebar</span>
           <svg
@@ -54,8 +85,9 @@ export default function Sidebar() {
         id="sidebar-multi-level-sidebar"
         className="fixed top-0 left-0 z-50 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0 bg-gray-800"
         aria-label="Sidebar"
+        onClick={(e) => e.stopPropagation()}
       >
-        <div className="h-40 flex justify-center items-center overflow-hidden w-full">
+        <div className="h-40 flex justify-center items-center overflow-hidden w-full bg-gray-800">
           <img
             src={sidebarImage}
             alt="sidebar"
@@ -70,33 +102,19 @@ export default function Sidebar() {
 
         <hr className="h-px bg-gray-400 border-0 mx-5" />
 
-        <div className="h-full px-3 py-3 overflow-y-auto bg-gray-50 dark:bg-gray-800  ">
+        <div className="h-full px-3 py-3 overflow-y-auto bg-gray-800">
           <div className="flex flex-col justify-between h-full">
             <ul className="space-y-2 font-medium">
               <div className="mb-5">
-                <Link to="/">
-                <ListItem itemName="الصفحة الرئيسية" />
-                </Link>
-                <Link to="/Autism">
-                  <ListItem itemName="طيف التوحد" />
-                </Link>
-                <Link to="/Deafness">
-                  <ListItem itemName="المشاكل السمعية" />
-                </Link>
-                <Link to="/Blindness">
-                  <ListItem itemName="المشاكل البصرية" />
-                </Link>
-                <Link to="/Mindproblems">
-                  <ListItem itemName="المشاكل العقلية" />
-                </Link>
-                <Link to="/Chronic">
-                  <ListItem itemName="الامراض المزمنة" />
-                </Link>
-                <Link to="/Paralysis">
-                  <ListItem itemName="المشاكل الحركية" />
-                </Link>
+                <ListItem itemName="الصفحة الرئيسية" link="/" />
+                <ListItem itemName="طيف التوحد" link="/Autism" />
+                <ListItem itemName="المشاكل السمعية" link="/Deafness" />
+                <ListItem itemName="المشاكل البصرية" link="/Blindness" />
+                <ListItem itemName="المشاكل العقلية" link="/Mindproblems" />
+                <ListItem itemName="الامراض المزمنة" link="/Chronic" />
+                <ListItem itemName="المشاكل الحركية" link="/Paralysis" />
               </div>
-              <hr className="h-px bg-gray-400 border-0  mx-2" />
+              <hr className="h-px bg-gray-400 border-0 mx-2" />
               <div className="py-1">
                 <ListItem
                   itemName="طلب إضافة مقطع"
@@ -106,9 +124,7 @@ export default function Sidebar() {
                   itemName="تواصل معنا"
                   link="https://forms.gle/LfwErE7RPFXockPU9"
                 />
-                <Link to="/AboutUS">
-                  <ListItem itemName="من نحن؟" />
-                </Link>
+                <ListItem itemName="من نحن؟" link="/AboutUS" />
               </div>
             </ul>
           </div>
