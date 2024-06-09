@@ -118,11 +118,11 @@ export default function Sidebar() {
               <div className="py-1">
                 <ListItem
                   itemName="طلب إضافة مقطع"
-                  link="https://forms.gle/d7mMqs4oGTnfZFLE8"
+                  link="https://forms.gle/d7mMqs4oGTnfZFLE8" external="true"
                 />
                 <ListItem
                   itemName="تواصل معنا"
-                  link="https://forms.gle/LfwErE7RPFXockPU9"
+                  link="https://forms.gle/LfwErE7RPFXockPU9" external="true"
                 />
                 <ListItem itemName="من نحن؟" link="/AboutUS" />
               </div>
